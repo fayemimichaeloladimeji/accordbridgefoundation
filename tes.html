@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popout Div Example</title>
+    <style>
+        /* Style for the popout div */
+        #popoutDiv {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Style for the overlay */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="#" id="navItem">Click me to popout div</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Popout div -->
+    <div id="popoutDiv">
+        <p>This is a popout div!</p>
+        <button id="closeBtn">Close</button>
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        // Get elements
+        const navItem = document.getElementById('navItem');
+        const popoutDiv = document.getElementById('popoutDiv');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Function to show the popout div and overlay
+        function showPopout() {
+            popoutDiv.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        // Function to hide the popout div and overlay
+        function hidePopout() {
+            popoutDiv.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        // Add event listener to nav item
+        navItem.addEventListener('click', function(event) {
+            event.preventDefault();
+            showPopout();
+        });
+
+        // Add event listener to close button
+        closeBtn.addEventListener('click', function() {
+            hidePopout();
+        });
+
+        // Add event listener to overlay
+        overlay.addEventListener('click', function() {
+            hidePopout();
+        });
+    </script>
+</body>
+</html>

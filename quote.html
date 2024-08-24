@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Accord-Bridge Foundation...Empowering Women & girls</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Accord-Bridge Foundation...Empowering Women & girls" name="keywords">
+    <meta content="Accord-Bridge Foundation...Empowering Women & girls" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo_curve.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--EVENT STYLE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+
+    <style>
+        #more1 {
+            display: none;
+        }
+
+        #more2 {
+            display: none;
+        }
+
+        #more3 {
+            display: none;
+        }
+
+        #more4 {
+            display: none;
+        }
+
+        .jumbotron {
+            text-align: center;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        .gallery {
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 0;
+            position: relative;
+        }
+    </style>
+
+
+    <style type="text/css">
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+
+            .dropdown-menu li {
+                position: relative;
+            }
+
+            .dropdown-menu .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: -7px;
+            }
+
+            .dropdown-menu .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+
+            .dropdown-menu>li:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown-menu>li:hover>.submenu {
+                display: block;
+            }
+        }
+
+        /* ============ desktop view .end// ============ */
+
+        /* ============ small devices ============ */
+        @media (max-width: 991px) {
+
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0.7rem;
+                margin-right: 0.7rem;
+                margin-bottom: .5rem;
+            }
+
+        }
+
+        /* ============ small devices .end// ============ */
+    </style>
+
+
+    <script type="text/javascript">
+        //	window.addEventListener("resize", function() {
+        //		"use strict"; window.location.reload(); 
+        //	});
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /////// Prevent closing from click inside dropdown
+            document.querySelectorAll('.dropdown-menu').forEach(function (element) {
+                element.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            })
+
+
+
+            // make it as accordion for smaller screens
+            if (window.innerWidth < 992) {
+
+                // close all inner dropdowns when parent is closed
+                document.querySelectorAll('.navbar .dropdown').forEach(function (everydropdown) {
+                    everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                        // after dropdown is hidden, then find all submenus
+                        this.querySelectorAll('.submenu').forEach(function (everysubmenu) {
+                            // hide every submenu as well
+                            everysubmenu.style.display = 'none';
+                        });
+                    })
+                });
+
+                document.querySelectorAll('.dropdown-menu a').forEach(function (element) {
+                    element.addEventListener('click', function (e) {
+
+                        let nextEl = this.nextElementSibling;
+                        if (nextEl && nextEl.classList.contains('submenu')) {
+                            // prevent opening link if link needs to open dropdown
+                            e.preventDefault();
+                            console.log(nextEl);
+                            if (nextEl.style.display == 'block') {
+                                nextEl.style.display = 'none';
+                            } else {
+                                nextEl.style.display = 'block';
+                            }
+
+                        }
+                    });
+                })
+            }
+            // end if innerWidth
+
+        });
+        // DOMContentLoaded  end
+    </script>
+
+    <script>
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.enterprise.ready(async () => {
+                const token = await grecaptcha.enterprise.execute('6LcXWAAnAAAAAAYXmloAzRe8RVZBmx0yoJQRxU11', { action: 'LOGIN' });
+                // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+                // reCAPTCHA Enterprise to the end user's browser.
+                // This token must be validated by creating an assessment.
+                // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+            });
+        }
+    </script>
+
+
+    <style>
+        /* This div design part is
+            used as an Image */
+        .imground {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            float: right;
+            font-weight: bold;
+
+            /* Change the shape according
+                to the image */
+            shape-outside: circle();
+            background-color: #016DB5;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body onload="showSlides(0)">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start-->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border myblue" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+
+
+            <div class="spinner-border myred" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+
+
+            <div class="spinner-border myyellow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border mygreen" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row gx-0">
+
+
+
+            <nav class="navbar navbar-expand-lg bg-white navbar-dark p-3 p-lg-0">
+
+                <img src="img/accord-new-logo.png" alt="" height="50" width="250px" style="margin-right: 10%;"
+                    class="navbar-brand d-block align-items-center">
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    style="background-color: #016DB5;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+
+                    <div class="navbar-nav mr-auto py-0" style="margin-left: 2%;">
+
+                        <a href="index.html" class="nav-item nav-link text-dark">Home</a>
+
+
+
+                        <div class="nav-item dropdown">
+                            <a href="about_us.html" class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"> About Us</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="about_us.html#who_we_are_item" class="dropdown-item text-light">Who We Are</a>
+                                <a href="trustee.html" class="dropdown-item text-light">Trustees</a>
+                                <a href="management.html" class="dropdown-item text-light">Management Team</a>
+
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a href="what_we_do.html" class="nav-link text-dark  dropdown-toggle"
+                                data-bs-toggle="dropdown">What We Do </a>
+                            <div class="dropdown-menu rounded-0 m-0" style="background-color: #019342">
+                                <a href="what_we_do.html#teenpreneur" class="dropdown-item text-light">Teenpreneur
+                                    programme</a>
+                                <a href="what_we_do.html#livelihood" class="dropdown-item text-light">Livelihood Initiative</a>
+                                <a href="what_we_do.html#agripreneur" class="dropdown-item text-light">Agripreneur
+                                    programme</a>
+                                <a href="what_we_do.html#microcredit" class="dropdown-item text-light">Micro-credit
+                                    scheme</a>
+                            </div>
+                        </div>
+
+
+
+
+                        <a href="events.html" class="nav-link text-dark">Events</a>
+                        <a href="quote.html" class="nav-link text-dark active myblue"
+                            ><strong> Quotes</strong> </a>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">
+                                Get Involved
+                            </a>
+
+                            <div class="dropdown-menu rounded-0 m-0" style="background-color: #ffffff">
+                                <a href="donate.html" class="dropdown-item">Donate</a>
+                                <a href="#" class="dropdown-item" style="color: #016DB5;">Corporate sponsorship </a>
+                                <li><a class="dropdown-item dropdown-toggle text-dark"
+                                        style="background-color: #016DB5;" href="nonfinancial.html">Non-financial
+                                        support</a>
+
+                                </li>
+
+
+
+
+                                <li><a class="dropdown-item dropdown-toggle text-dark" href="volunteer.html">Volunteer
+                                        and Take
+                                        action</a>
+                                    <!--<ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item text-dark" href="#">Volunteer</a></li>
+                                        <li><a class="dropdown-item text-dark" href="#">Sponsor an event
+                                                <i class='fas fa-share-alt-square'
+                                                    style='font-size:20px; color:red'></i></a></li>
+
+
+
+                                        <div class="sm_list">
+                                            <a href="https://mail.google.com" class="me-2">
+                                                <i class="fa fa-envelope" style="color: #a81501;"></i>
+                                            </a>
+                                            <a href="https://web.facebook.com">
+                                                <i class="fa fa-facebook"
+                                                    style="background-color: #ffffff; color: #016DB5;"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com">
+                                                <i class="fa fa-instagram" style="color: rgb(205, 72, 107);"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com" class="linkedin" style="color: #016DB5;">
+                                                <i class="fa fa-linkedin-in"></i>
+                                            </a>
+
+                                            <a href="https://www.whatsapp.com" class="whatsapp" style="color: #019342;">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+                                            <a href="https://www.twitter.com" class="twitter">
+                                                <i class="fa fa-twitter"
+                                                    style="background-color: #ffffff; color: #016DB5;"></i>
+                                            </a>
+                                        </div>
+                                    </ul>-->
+                                </li>
+                            </div>
+                        </div>
+
+                        <a href="contact_us.html" class="nav-link text-dark">Contact us</a>
+
+                    </div>
+                    <!--<a href="#" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
+                                Chat Us
+                                <i
+                                    class="fa fa-arrow-right ms-3"></i>
+                                </a>-->
+                </div>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <!-- Header End -->
+
+
+
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 10px;">
+        <h6 class="section-title text-center text-uppercas wow fadeInUp" style="color: #019342;">ACCORD-<strong
+                style="color: #016DB5;">BRIDGE </strong> <strong style="color: #a81501;">FOUNDATION</strong>
+        </h6>
+
+        <h1 class="mb-5 text-uppercase slideInRight myblue">
+            QUOTES
+        </h1>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container-xxl my-5 py-5 zoomIn" data-wow-delay="0.1s">
+        <div class="container">
+
+            <div class="col-md-12 d-flex align-items-center" style="background-color: #016DB5;">
+
+                <div class="p-5">
+
+
+
+                    <h5 class="text-white mb-4">  … It is not enough to be compassionate, we must act - Dalai Lama. </h5>
+
+                    <p class="text-white mb-4 wow fadeInUp">
+                      </p>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="owl-carousel testimonial-carousel py-5 wow fadeInUp">
+
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+                background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        It is not enough to be compassionate, we must act - Dalai Lama.
+
+                    </p>
+                    <div class="d-flex align-items-center">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong> Jim Yong Kim</strong></em>
+                            </h6>
+                            <small>(World Bank group president)</small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+                background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        One of the quickest ways to end poverty is increasing the ranks of female entrepreneurs...
+                        The US should pay attention to the breakthroughs happening in the developing world
+
+
+                    </p>
+                    <div class="d-flex align-items-center">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong> Jim Yong Kim</strong></em>
+                            </h6>
+                            <small>(World Bank group president)</small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+                background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “A woman is the full circle.Within her is the power to create, nurture and transform”.
+                    </p>
+                    <div class="d-flex align-items-center">
+
+                        <div class="ps-3 text-light">
+
+                            - <em> <strong>
+                                    Diane Mariechild.</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                </div>
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+                background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “We can do no great things, only small things with great love”.
+
+                    </p>
+                    <div class="d-flex align-items-center">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>Mother Teresa</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+                <div class="testimonial-item position-relative bg-white rounded overflow-hidden" style="background: rgb(218,53,30);
+                background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “The empowered woman is powerful beyond measure and beautiful beyond description”.
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="ps-3">
+
+                            - <em> <strong>
+                                    Steve Maraboli</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                </div>
+
+
+                <div class="testimonial-item position-relative bg-white rounded overflow-hidden" style="background: rgb(2,0,36);
+             background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+                    <p class="text-light">
+                        “Everybody can be great...because anybody can serve...You only need a heart full of grace.
+                        A soul generated by love.”
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="ps-3">
+                            - <em> <strong>Martin Luther King, Jr.</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                </div>
+
+
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+             background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “Make a conscious effort to surround yourself with positive, nourishing and uplifting people.
+                        People who believe in you, encourage you to go after your dreams and applaud your victories”.
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>Jack Canfield</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+
+                <div class="testimonial-item position-relative bg-white rounded overflow-hidden" style="background: rgb(218,53,30);
+             background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “There is no tool for development more effective than the empowerment of women”.
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="ps-3">
+
+                            - <em> <strong>
+                                    Kofi Annan</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                </div>
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+            background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        There can be no greater gift than that of giving one's time and energy to helping others without
+                        expecting anything in return."
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>Nelson Mandela
+                                    </strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+
+
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+            background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “Give a girl the right shoes and she can conquer the world”.
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>Better Midler</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+            background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “Women are the largest untapped reservoir of talent in the world”.
+
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>Hillary Clinton</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+            background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “There is no force equal to a woman determine to rise”.
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>- W.E.B. Dubois</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden" style="background: rgb(218,53,30);
+            background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        Women’s empowerment is the best investment that a business can make.
+
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="text-light ps-3">
+                            <h6 class="fw-bold mb-1">
+                                - <em> <strong>Christine LarGarde</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1"
+                        style="color: #016DB5;"></i>
+                </div>
+
+
+
+
+                <div class="testimonial-item position-relative bg-white rounded overflow-hidden" style="background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+                    <p class="text-light">
+                        “I love to see a young girl go out and grab the world by the lapels. Life’s a bitch. You’ve got
+                        to go out and kick ass.
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+
+                        <div class="ps-3">
+                            - <em> <strong> Maya Angelou</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                </div>
+
+
+                <div class="testimonial-item position-relative rounded overflow-hidden text-light" style="background: rgb(218,53,30);
+            background: linear-gradient(0deg, rgba(218,53,30,1) 0%, rgba(1,147,66,1) 100%);">
+                    <p class="text-light">
+                        “Encourage, lift and strengthen one another. For the positive energy spread to one will be felt
+                        by us all”.
+                    </p>
+                    <div class="d-flex align-items-center text-light">
+                        <div class="ps-3">
+                            - <em> <strong>
+                                    Deborah Day</strong></em>
+                            </h6>
+                            <small></small>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quotes  1  End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start 0,212,255,1 style="background: rgb(2, 172, 206);
+    background: linear-gradient(90deg, rgba(2, 172, 206) 0%, rgb(2, 172, 206) 60%, rgba(2, 172, 206) 100%); margin-bottom: 10px;">
+        <div class="container pb-5" style="background: rgb(2, 172, 206);"-->
+    <div class="container-fluid text-light footer wow fadeInUp" data-wow-delay="0.1s"
+        style="margin-top: 20px; background-color: #016DB5;  margin-bottom: 10px;">
+        <div class="container pb-5">
+            <div class="row g-5">
+
+                <div class="col-md-6 col-lg-4 wow zoomIn">
+                    <h6 class="text-start text-uppercase mb-4 text-light">Contact Us</h6>
+                    <p class="mb-2 text-light"><i class="fa fa-phone me-3" style="color: #F5D254"></i>
+                        +234 818 442 7674
+                    <p class="mb-2 text-light">
+                        <i class="fa fa-envelope me-3" style="color: #e60404;"></i>
+                             info@abf.org.ng
+                    </p>
+
+                    <!--<div class="d-flex pt-2">
+                        <img src="img/accord-new-logo.png" alt="" height="50" class="navbar-brand d-block align-items-center">
+                    </div>-->
+
+
+
+                    <a class="me-3" href="https://web.facebook.com/AccordBridgeFDN"><i class="fa fa-facebook"></i></a>
+
+                    <a class="me-3" href="https://x.com/accordbridgefdn">
+                        <img src="img/X_logo.jpg" alt="" width="24" height="24">
+                    </a>
+
+                    <a class="me-3" href="https://www.youtube.com/@AccordBridgeFDN"><i class="fa fa-youtube-play"
+                            style="font-size:30px;color:red"></i></a>
+
+
+
+                </div>
+
+                <div class="col-lg-5 col-md-12 wow slideInDown">
+                    <div class="row gy-5 g-4">
+                        <div class="col-md-6">
+                            <h6 class="text-start text-light text-uppercase mb-4">Quick
+                                Links
+                            </h6>
+                            <a class="btn btn-link" href="index.html">Home</a>
+                            <a class="btn btn-link" href="about_us.html">About Us</a>
+                            <a class="btn btn-link" href="events.html">Event</a>
+                            <a class="btn btn-link" href="contact_us.html">Contact Us</a>
+                            <a class="btn btn-link" href="cooperate-sponsorship.html">Get Involved</a>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-start text-light text-uppercase mb-4">What We Do
+                            </h6>
+                            <a href="what_we_do.html#teenpreneur" class="btn btn-link">Teenpreneur programme</a>
+                            <a href="what_we_do.html#livelihood" class="btn btn-link">Livelihood Initiative</a>
+                            <a href="what_we_do.html#agripreneur" class="btn btn-link">Agripreneur programme</a>
+                            <a href="what_we_do.html#microcredit" class="btn btn-link">Micro-credit scheme</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">2024 Accord-Bridge Foundation</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="index.html" class="btn btn-lg btn-lg-square back-to-top" style="background-color:#016DB5;">
+        <i class="bi bi-arrow-up text-light"></i>
+
+    </a>
+
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run(".gallery", {
+            animation: "slideIn"
+        });
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+</body>
+
+</html>

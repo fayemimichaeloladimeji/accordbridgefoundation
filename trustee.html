@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Accord-Bridge Foundation...Empowering Women & girls</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Accord-Bridge Foundation...Empowering Women & girls" name="keywords">
+    <meta content="Accord-Bridge Foundation...Empowering Women & girls" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo_curve.png" rel="icon">
+
+    <!--MODAL-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--EVENT STYLE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+
+    <style>
+        #more1 {
+            display: none;
+        }
+
+        #more2 {
+            display: none;
+        }
+
+        #more3 {
+            display: none;
+        }
+
+        #more4 {
+            display: none;
+        }
+
+        .jumbotron {
+            text-align: center;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        .gallery {
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 0;
+            position: relative;
+        }
+    </style>
+
+
+    <style type="text/css">
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+
+            .dropdown-menu li {
+                position: relative;
+            }
+
+            .dropdown-menu .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: -7px;
+            }
+
+            .dropdown-menu .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+
+            .dropdown-menu>li:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown-menu>li:hover>.submenu {
+                display: block;
+            }
+        }
+
+        /* ============ desktop view .end// ============ */
+
+        /* ============ small devices ============ */
+        @media (max-width: 991px) {
+
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0.7rem;
+                margin-right: 0.7rem;
+                margin-bottom: .5rem;
+            }
+
+        }
+
+        /* ============ small devices .end// ============ */
+    </style>
+
+
+    <script type="text/javascript">
+        //	window.addEventListener("resize", function() {
+        //		"use strict"; window.location.reload(); 
+        //	});
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /////// Prevent closing from click inside dropdown
+            document.querySelectorAll('.dropdown-menu').forEach(function (element) {
+                element.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            })
+
+
+
+            // make it as accordion for smaller screens
+            if (window.innerWidth < 992) {
+
+                // close all inner dropdowns when parent is closed
+                document.querySelectorAll('.navbar .dropdown').forEach(function (everydropdown) {
+                    everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                        // after dropdown is hidden, then find all submenus
+                        this.querySelectorAll('.submenu').forEach(function (everysubmenu) {
+                            // hide every submenu as well
+                            everysubmenu.style.display = 'none';
+                        });
+                    })
+                });
+
+                document.querySelectorAll('.dropdown-menu a').forEach(function (element) {
+                    element.addEventListener('click', function (e) {
+
+                        let nextEl = this.nextElementSibling;
+                        if (nextEl && nextEl.classList.contains('submenu')) {
+                            // prevent opening link if link needs to open dropdown
+                            e.preventDefault();
+                            console.log(nextEl);
+                            if (nextEl.style.display == 'block') {
+                                nextEl.style.display = 'none';
+                            } else {
+                                nextEl.style.display = 'block';
+                            }
+
+                        }
+                    });
+                })
+            }
+            // end if innerWidth
+
+        });
+        // DOMContentLoaded  end
+    </script>
+
+    <script>
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.enterprise.ready(async () => {
+                const token = await grecaptcha.enterprise.execute('6LcXWAAnAAAAAAYXmloAzRe8RVZBmx0yoJQRxU11', { action: 'LOGIN' });
+                // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+                // reCAPTCHA Enterprise to the end user's browser.
+                // This token must be validated by creating an assessment.
+                // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+            });
+        }
+    </script>
+
+</head>
+
+<body onload="showSlides(0)">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start 
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border myblue" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+
+
+            <div class="spinner-border myred" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+
+
+            <div class="spinner-border myyellow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border mygreen" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>-->
+
+
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row gx-0">
+
+
+
+            <nav class="navbar navbar-expand-lg bg-white navbar-dark p-3 p-lg-0">
+
+
+                <img src="img/accord-new-logo.png" alt="" height="50" width="250px" style="margin-right: 10%;"
+                    class="navbar-brand d-block align-items-center">
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    style="background-color: #016DB5;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+
+                    <div class="navbar-nav mr-auto py-0" style="margin-left: 2%;">
+
+                        <a href="index.html" class="nav-item nav-link text-dark">Home</a>
+
+
+
+                        <div class="nav-item dropdown">
+                            <a href="about_us.html" class="nav-link dropdown-toggle active myblue"
+                                data-bs-toggle="dropdown"> <strong> About Us</strong></a>
+                            <div class="dropdown-menu rounded-0 m-0" style="background-color: #016DB5;">
+                                <a href="about_us.html" class="dropdown-item text-light">Who We Are</a>
+                                <a href="trustee.html" class="dropdown-item text-light">Trustees</a>
+                                <a href="management.html" class="dropdown-item text-light">Management Team</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a href="what_we_do.html" class="nav-link text-dark  dropdown-toggle"
+                                data-bs-toggle="dropdown">What We Do </a>
+                            <div class="dropdown-menu rounded-0 m-0" style="background-color: #019342">
+                                <a href="what_we_do.html#teenpreneur" class="dropdown-item text-light">Teenpreneur
+                                    programme</a>
+                                <a href="what_we_do.html#livelihood" class="dropdown-item text-light">Livelihood
+                                    Initiative</a>
+                                <a href="what_we_do.html#agripreneur" class="dropdown-item text-light">Agripreneur
+                                    programme</a>
+                                <a href="what_we_do.html#microcredit" class="dropdown-item text-light">Micro-credit
+                                    scheme</a>
+                            </div>
+                        </div>
+
+
+                        <a href="events.html" class="nav-link text-dark">Events</a>
+                        <a href="quote.html" class="nav-link text-dark">Quotes</a>
+
+                        <div class="nav-item dropdown">
+                            <a href="cooperate-sponsorship.html" class="nav-link dropdown-toggle text-dark"
+                                data-bs-toggle="dropdown">
+                                Get Involved
+                            </a>
+
+
+                            <div class="dropdown-menu rounded-0 m-0" style="background-color: #ffffff">
+
+
+                                <a href="donate.html" class="dropdown-item myred"
+                                    style="background-color: #016DB5;">Donate</a>
+
+                                <a href="cooperate-sponsorship.html" class="dropdown-item"
+                                    style="color: #016DB5;">Corporate
+                                    sponsorship </a>
+
+                                <li><a class="dropdown-item dropdown-toggle text-dark"
+                                        href="nonfinancial.html">Non-financial
+                                        support</a>
+
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item dropdown-toggle text-dark" href="volunteer.html">Volunteer
+                                        and Take
+                                        action</a>
+                                </li>
+
+                            </div>
+
+                        </div>
+                        <a href="contact_us.html" class="nav-link text-dark">Contact us</a>
+
+                    </div>
+                    <!--<a href="#" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
+                                Chat Us
+                                <i
+                                    class="fa fa-arrow-right ms-3"></i>
+                                </a>-->
+                </div>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <!-- Header End -->
+
+
+
+
+
+
+
+
+    <!-- TRUSTEE Start -->
+    <div class="container-xxl py-5" style="margin-bottom: 10px; justify-content: center;">
+        <div class="container align-items-center">
+
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="section-title text-center text-primary text-uppercase">TRUSTEES</h1>
+                <h6 class="mb-5">Trustees'
+                    <span class="text-primary">Profile</span>
+                </h6>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded shadow overflow-hidden slideInLeft"
+                        style="width: 200px; margin: auto; display: block;">
+                        <div class="position-relative">
+                            <img class="align-items-center" src="img/trustee/Victoria Nwoka.jpg" alt=""
+                                style="height: 200px; width: 200px; margin: auto;">
+
+
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">
+                                    Mrs. Victoria Nwoka</h5>
+                                <small><em>Trustee</em></small>
+
+                                <p class="text-dark" style="margin-top: 10px; text-align: left; margin-left: 5px; margin-right: 5px;">
+                                    Victoria Nwoka is a retired senior Civil Servant <span id="dots1">...</span>
+                                    <span id="more1">
+
+                                        Victoria Nwoka is a retired senior Civil Servant who spent over thirty years as
+                                        an educator, teaching at the primary school level. She is an instinctual
+                                        philanthropist who has maintained a dedication to empowering women and
+                                        adolescent girls.
+                                        She has held leadership positions within and outside her local community where
+                                        she initiated partnerships with external organizations for the provision of
+                                        several skills acquisition programmes to advance women’s economic empowerment
+                                        and drive economic change in these communities.
+                                        Victoria is highly driven and passionate about service to humanity and community
+                                        development.
+                                        She is a role model to many women.
+
+                                    </span>
+
+                                    <button onclick="myFunction()" id="myBtn1" type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#myModal1"
+                                        class="btn btn-light py-md-3 px-sm-5 animated slideInRight"
+                                        style="background-color: #016DB5; color: white;">
+                                        <i class="fas fa-angle-double-right"></i>
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded shadow overflow-hidden slideInLeft"
+                        style="width: 200px; margin: auto; display: block;">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/trustee/Eme Akwari.jpg" alt=""
+                                style="height: 200px; width: 200px; margin: auto;">
+
+
+                            <!-- <div
+                            class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-facebook"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-instagram text-light"
+                                    style="background-color: rgb(205, 72, 107);"></i></a>
+                        </div>-->
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">
+                                    Mr. Eme Akwari</h5>
+                                <small><em>Trustee</em></small>
+                                <p class="text-dark" style="margin-top: 10px; text-align: left; margin-left: 5px; margin-right: 5px;">
+                                    Eme Akwari is accomplished in varied <span id="dots2">...</span>
+                                    <span id="more1">
+                                        Eme Akwari is accomplished in varied specialties having been a broadcast
+                                        consultant with a decade of experience in banking and also holding a political
+                                        appointment.
+                                        Akwari also has experience in the real sector of the economy of Nigeria.
+                                        He has a special interest in the sound upbringing of children, especially the
+                                        girl child and has shown broad-based support for the less privileged in his
+                                        community.
+
+                                    </span>
+                                    <button onclick="myFunction()" id="myBtn1" type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#myModal2"
+                                        class="btn btn-light py-md-3 px-sm-5 animated slideInRight"
+                                        style="background-color: #016DB5; color: white;">
+                                        <i class="fas fa-angle-double-right"></i>
+                                    </button>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded shadow overflow-hidden slideInLeft"
+                        style="width: 200px; margin: auto; display: block;">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/trustee/Kate Erusiafe.png" alt=""
+                                style="height: 200px; width: 200px; margin: auto;">
+
+
+                            <!-- <div
+                            class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-facebook"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-instagram text-light"
+                                    style="background-color: rgb(205, 72, 107);"></i></a>
+                        </div>-->
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">
+                                    Mrs. Kate Erusiafe</h5>
+                                <small><em>Trustee</em></small>
+                                <p class="text-dark"
+                                    style="margin-top: 10px; text-align: left;  text-align: left; margin-left: 5px; margin-right: 5px;">
+                                    She is a graduate of Computer Science<span id="dots3">...</span><span id="more3">
+                                        She is a graduate of Computer Science and an assiduous entrepreneur who has
+                                        supported the vision of the Accord-Bridge Foundation from its cradle.
+                                        She has started and owned many businesses and presently hosts agricultural
+                                        training for women.
+                                        Kate has a personal mission of facilitating the transformation of individuals
+                                        and communities.
+                                        She aspires to lead women and girls into developing their full potential and, is
+                                        fully dedicated and eager to contribute her diverse work experience to support
+                                        the women’s economic empowerment initiatives of the Accord-Bridge Foundation.
+                                    </span>
+                                    <button onclick="myFunction()" id="myBtn1" type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#myModal3"
+                                        class="btn btn-light py-md-3 px-sm-5 animated slideInRight"
+                                        style="background-color: #016DB5; color: white;">
+                                        <i class="fas fa-angle-double-right"></i>
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 10px;">
+                    <div class="rounded shadow overflow-hidden slideInLeft"
+                        style="width: 200px; margin: auto; display: block;">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/trustee/Raymond Ekemezie.jpg" alt=""
+                                style="height: 200px; width: 200px; margin: auto;">
+
+
+                            <!-- <div
+                            class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-facebook"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fa fa-instagram text-light"
+                                    style="background-color: rgb(205, 72, 107);"></i></a>
+                        </div>-->
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">
+                                    Pastor Raymond Chukwudum Ekezie</h5>
+                                <small><em>Trustee</em></small>
+                                <p class="text-dark"
+                                    style="margin-top: 10px; text-align: left; margin-left: 5px; margin-right: 5px;">
+                                    Clergy and the founder of the <span id="dots4">...</span><span id="more4">
+                                        Clergy and the founder of the Healing stream International worship centre.
+                                        He believes in and teaches the word of God, and just as importantly, he supports
+                                        various poverty eradication projects, especially regarding the empowerment of
+                                        women.
+                                        He has been a keen supporter of the Accord-Bridge Foundation since he learned of
+                                        their inspiring mission to help women and girls to become financially
+                                        independent through skills acquisition for wealth creation.
+
+
+                                    </span>
+                                    <button onclick="myFunction()" id="myBtn1" type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#myModal4"
+                                        class="btn btn-light py-md-3 px-sm-5 animated slideInRight"
+                                        style="background-color: #016DB5; color: white;">
+                                        <i class="fas fa-angle-double-right"></i>
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div> <!-- TRUSTEE END-->
+
+
+
+
+        <div class="row">
+
+
+
+
+            <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="myModal1" style="background-color: #016DB5;">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h1 class="modal-title" style="margin: auto;">TRUSTEE</h1>
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img class="img-fluid align-items-center" src="img/trustee/Victoria Nwoka.jpg"
+                                    style="margin: auto; display: block;  height: 200px; width: 200px;" alt="">
+                                <div class="text-center p-4 mt-3">
+                                    <h5 class="fw-bold mb-0">
+                                        Mrs. Victoria Nwoka</h5>
+                                    <small><em>Trustee</em></small>
+                                    <p class="text-dark"
+                                        style="margin-top: 10px; text-align: left; margin-left: 5px; margin-right: 5px;">
+                                        Victoria Nwoka is a retired senior Civil Servant who spent over thirty years as
+                                        an educator, teaching at the primary school level.
+                                        She is an instinctual philanthropist who has maintained a dedication to
+                                        empowering women and adolescent girls.
+                                        She has held leadership positions within and outside her local community where
+                                        she initiated partnerships with external organizations for the provision of
+                                        several skills acquisition programmes to advance women’s economic empowerment
+                                        and drive economic change in these communities.
+                                        Victoria is highly driven and passionate about service to humanity and community
+                                        development.
+                                        She is a role model to many women.
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="container">
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal2" style="background-color: #016DB5;">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h1 class="modal-title" style="margin: auto;">TRUSTEE</h1>
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <img class="img-fluid align-items-center" src="img/trustee/Eme Akwari.jpg"
+                                        style="margin: auto; display: block; height: 200px; width: 200px;" alt="">
+                                    <div class="text-center p-4 mt-3">
+                                        <h5 class="fw-bold mb-0">
+                                            Mr. Eme Akwari</h5>
+                                        <small><em>Trustee</em></small>
+                                        <p class="text-dark"
+                                            style="margin-top: 10px; margin-left: 5px;  text-align: left; margin-right: 5px;">
+                                            </h5>
+                                            Eme Akwari is accomplished in varied specialties having been a broadcast
+                                            consultant with a decade of experience in banking and also holding a
+                                            political appointment.
+                                            Akwari also has experience in the real sector of the economy of Nigeria.
+                                            He has a special interest in the sound upbringing of children, especially
+                                            the girl child and has shown broad-based support for the less privileged in
+                                            his community.
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="container">
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal3" style="background-color: #016DB5;">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" style="margin: auto;">TRUSTEE</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <img class="img-fluid align-items-center" src="img/trustee/Kate Erusiafe.png"
+                                            style="margin: auto; display: block; height: 200px; width: 200px;" alt="">
+                                        <div class="text-center p-4 mt-3">
+                                            <h5 class="fw-bold mb-0">
+                                                Mrs. Kate Erusiafe</h5>
+                                            <small><em>Trustee</em></small>
+                                            <p class="text-dark"
+                                                style="margin-top: 10px; margin-left: 5px;text-align: left;  margin-right: 5px;">
+
+                                                She is a graduate of Computer Science and an assiduous entrepreneur who
+                                                has supported the vision of the Accord-Bridge Foundation from its
+                                                cradle.
+                                                She has started and owned many businesses and presently hosts
+                                                agricultural training for women. Kate has a personal mission of
+                                                facilitating the transformation of individuals and communities.
+                                                She aspires to lead women and girls into developing their full potential
+                                                and, is fully dedicated and eager to contribute her diverse work
+                                                experience to support the women’s economic empowerment initiatives of
+                                                the Accord-Bridge Foundation.
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="container">
+                            <!-- The Modal -->
+                            <div class="modal" id="myModal4" style="background-color: #016DB5;">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h1 class="modal-title" style="margin: auto;">TRUSTEE</h1>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <img class="img-fluid align-items-center"
+                                                src="img/trustee/Raymond Ekemezie.jpg"
+                                                style="margin: auto; display: block; height: 200px; width: 200px;"
+                                                alt="">
+                                            <div class="text-center p-4 mt-3">
+                                                <h5 class="fw-bold mb-0">
+                                                    Pastor Raymond Chukwudum Ekemezie</h5>
+                                                <small><em>Trustee</em></small>
+                                                <p class="text-dark"
+                                                    style="margin-top: 10px; margin-left: 5px; text-align: left; margin-right: 5px;">
+
+                                                    Clergy and the founder of the Healing stream International worship
+                                                    centre. He believes in and teaches the word of God, and just as
+                                                    importantly, he supports various poverty eradication projects,
+                                                    especially regarding the empowerment of women.
+                                                    He has been a keen supporter of the Accord-Bridge Foundation since
+                                                    he learned of their inspiring mission to help women and girls to
+                                                    become financially independent through skills acquisition for wealth
+                                                    creation.
+                                            </div>
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        <!-- Footer Start 0,212,255,1 style="background: rgb(2, 172, 206);
+    background: linear-gradient(90deg, rgba(2, 172, 206) 0%, rgb(2, 172, 206) 60%, rgba(2, 172, 206) 100%); margin-bottom: 10px;">
+        <div class="container pb-5" style="background: rgb(2, 172, 206);"-->
+                        <div class="text-light footer wow fadeInUp" data-wow-delay="0.1s"
+                            style="background-color: #016DB5;  margin-bottom: 10px; margin-top: 90px;">
+                            <div class="container pb-5">
+                                <div class="row g-5">
+
+                                    <div class="col-md-6 col-lg-4 wow zoomIn">
+                                        <h6 class="text-start text-uppercase mb-4 text-light">Contact Us</h6>
+                                        <p class="mb-2 text-light"><i class="fa fa-phone me-3" style="color: #F5D254"></i>
+                                            +234 818 442 7674
+                                        <p class="mb-2 text-light">
+                                            <i class="fa fa-envelope me-3" style="color: #e60404;"></i>
+                                                 info@abf.org.ng
+                                        </p>
+                    
+                                        <!--<div class="d-flex pt-2">
+                                <img src="img/accord-new-logo.png" alt="" height="50" class="navbar-brand d-block align-items-center">
+                            </div>-->
+
+                            <a class="me-3" href="https://web.facebook.com/AccordBridgeFDN"><i class="fa fa-facebook"></i></a>
+
+                            <a class="me-3" href="https://x.com/accordbridgefdn">
+                                <img src="img/X_logo.jpg" alt="" width="24" height="24">
+                            </a>
+        
+                            <a class="me-3" href="https://www.youtube.com/@AccordBridgeFDN"><i class="fa fa-youtube-play"
+                                    style="font-size:30px;color:red"></i></a>
+        
+                                    </div>
+
+                                    <div class="col-lg-5 col-md-12 wow slideInDown">
+                                        <div class="row gy-5 g-4">
+                                            <div class="col-md-6">
+                                                <h6 class="text-start text-light text-uppercase mb-4">Quick
+                                                    Links
+                                                </h6>
+                                                <a class="btn btn-link" href="index.html">Home</a>
+                                                <a class="btn btn-link" href="about_us.html">About
+                                                    Us</a>
+                                                <a class="btn btn-link" href="events.html">Event</a>
+                                                <a class="btn btn-link" href="contact_us.html">Contact Us</a>
+                                                <a class="btn btn-link" href="cooperate-sponsorship.html">Get
+                                                    Involved</a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="text-start text-light text-uppercase mb-4">What We Do
+                                                </h6>
+                                                <a href="what_we_do.html#teenpreneur" class="btn btn-link">Teenpreneur
+                                                    programme</a>
+                                                <a href="what_we_do.html#livelihood" class="btn btn-link">Livelihood
+                                                    initiatives</a>
+                                                <a href="what_we_do.html#agripreneur" class="btn btn-link">Agripreneur
+                                                    programme</a>
+                                                <a href="what_we_do.html#microcredit" class="btn btn-link">Micro-credit
+                                                    scheme</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="copyright">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center mb-3 mb-md-0">
+
+                                            &copy; <a class="border-bottom" href="#">2024 Accord-Bridge
+                                                Foundation</a></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer End -->
+
+
+                        <!-- Back to Top -->
+                        <a href="index.html" class="btn btn-lg btn-lg-square back-to-top"
+                            style="background-color:#016DB5;">
+                            <i class="bi bi-arrow-up text-light"></i>
+
+                        </a>
+
+                    </div>
+
+                    <!-- JavaScript Libraries -->
+                    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                    <script src="lib/wow/wow.min.js"></script>
+                    <script src="lib/easing/easing.min.js"></script>
+                    <script src="lib/waypoints/waypoints.min.js"></script>
+                    <script src="lib/counterup/counterup.min.js"></script>
+                    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                    <script src="lib/tempusdominus/js/moment.min.js"></script>
+                    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+                    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+                    <!-- Template Javascript -->
+                    <script src="js/main.js"></script>
+
+
+
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+                    <script>
+                        baguetteBox.run(".gallery", {
+                            animation: "slideIn"
+                        });
+                    </script>
+
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+</body>
+
+</html>
